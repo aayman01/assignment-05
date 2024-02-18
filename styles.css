@@ -1,0 +1,23 @@
+.bus-seat{
+    background-color: #F7F8F8;
+    color:  #03071280;
+    width: 60px;
+    text-align: center;
+    border-radius: 8px;
+}
+.seat-container{
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    gap: 20px;
+}
+
+.seat-container2{
+    display: grid;
+    grid-template-columns: repeat(2, 50px);
+    gap: 20px;
+}
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(2 , 200px);
+}
+
