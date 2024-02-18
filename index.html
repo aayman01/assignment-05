@@ -258,7 +258,7 @@
                         </div>
                         
                         <div class="flex-grow">
-                            <!-- cupon apply section -->
+                            <!-- coupon apply section -->
                           <div class="bg-[#F7F8F8] rounded-xl p-8">
                             <div class="overflow-x-auto">
                               <table class="table">
@@ -281,8 +281,10 @@
                                     <p class="pb-1 font-inter font-medium">Total Price:</p>
                                     <p class="font-inter font-medium">BDT <span id="total-cost" class="total-cost">0</span></p>
                                 </div>
-                                <input type="text" placeholder="Have any copupon?" class="pl-6 input input-bordered input-md w-full max-w-xs" />
-                                <button class="btn bg-[#1DD100] rounded-lg" disabled>Apply</button>
+                                <div id="input-container">
+                                    <input id="coupon-input" type="text" placeholder="Have any coupon?" class="pl-6 input input-bordered input-md w-full max-w-xs" />
+                                    <button id="coupon-btn" class="btn bg-[#1DD100] rounded-lg">Apply</button>
+                                </div>
                                 <div class="flex justify-between p-5">
                                     <p class="pb-1 font-inter font-medium">Grand Total:</p>
                                     <p class="font-inter font-medium">BDT <span id="grand-cost" class="grand-cost">0</span></p>
@@ -303,12 +305,27 @@
                                 <label class="text-[#131318] text-xl font-bold" for="">Your Email</label>
                                 <input type="text" placeholder="Enter your email" class="mt-2 input input-bordered w-full border-none outline-none bg-[#13131805] py-5"/>
                             </div>
-                            <button class="btn btn-wide bg-[#1DD100] mt-2" disabled>Next</button>
+                            <!-- <button class="btn btn-wide bg-[#1DD100] mt-2">Next</button> -->
+                            <!-- Open the modal using ID.showModal() method -->
+                            <button class="btn btn-wide bg-[#1DD100] mt-2" onclick="my_modal_2.showModal()">Next</button>
+                            <dialog id="my_modal_2" class="modal">
+                              <div class="modal-box flex flex-col items-center">
+                                <img src="./images/success.png" alt="">
+                                <h3 class="font-bold text-lg text-center pt-2">SUCCESS</h3>
+                                <p class="py-2 text-center text-[#4A4A4A] text-lg font-medium">Thank you for Booking Our Bus Seats.</p>
+                                <p class="text-center text-base font-light pb-2">We are working hard to find the best service and deals for you. Shortly you will find a confirmation in your email</p>
+                                <button class="btn bg-[#1DD100]">Continue</button>
+                              </div>
+                              <form method="dialog" class="modal-backdrop">
+                                <button>close</button>
+                              </form>
+                            </dialog>
                         </div>
                         </div>
                     </div>
                 </div>
         </section>
+         
     </main>
     <footer></footer>
     <script src="./Scripts/scripts.js"></script>

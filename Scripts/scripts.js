@@ -61,8 +61,30 @@ for(const btn of allBtn){
 
 }
 
+const couponCode = document.getElementById('coupon-btn').addEventListener('click',function(){
+    // console.log('clicked')
+    const couponInput = document.getElementById('coupon-input').value;
+    if(couponInput == 'NEW15' || couponInput == 'Couple 20'){
+        if(couponInput == 'NEW15'){
+            const grandCost = document.getElementById('grand-cost').innerText;
+            const discountOnNew = parseInt(grandCost) * (20/100);
+            const discountTotal = parseInt(grandCost) - discountOnNew;
+            setInnerText('grand-cost',discountTotal);
+        }
+        else if(couponInput == 'Couple 20'){
+            const grandCost = document.getElementById('grand-cost').innerText;
+            const discountOnNew = parseInt(grandCost) * (15/100);
+            const discountTotal = parseInt(grandCost) - discountOnNew;
+            setInnerText('grand-cost',discountTotal);
+        }
+        const couponContainer = document.getElementById('input-container');
+        couponContainer.classList.add('hidden');
 
-
+    }
+    else{
+        alert('Wrong Coupon Code')
+    }
+})
 
 function setInnerText (id,value){
     document.getElementById(id).innerText = value;    
