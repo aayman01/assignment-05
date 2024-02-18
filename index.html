@@ -266,19 +266,16 @@
                                     <th>Price</th>
                                   </tr>
                                 </thead>
-                                <tbody>
-                                  <!-- row 1 -->
+                                <tbody id="slected-ticket-container" class="slected-ticket-container"></tbody>
+                                  
                                 
-                                  <tr id="slected-ticket-container" class="slected-ticket-container">
-
-                                  </tr>
                                 </tbody>
                               </table>
                             </div>
                             <div class="space-y-2">
                                 <div class="flex justify-between p-5">
                                     <p class="pb-1 font-inter font-medium">Total Price:</p>
-                                    <p class="font-inter font-medium">BDT <span>0</span></p>
+                                    <p class="font-inter font-medium">BDT <span id="total-cost" class="total-cost">0</span></p>
                                 </div>
                                 <input type="text" placeholder="Have any copupon?" class="pl-6 input input-bordered input-md w-full max-w-xs" />
                                 <button class="btn bg-[#1DD100] rounded-lg" disabled>Apply</button>
