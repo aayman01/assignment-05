@@ -2,7 +2,7 @@ function scrollToSection() {
   document.getElementById('ticket-section').scrollIntoView({ behavior: 'smooth' });
 }
 
-const allBtn = document.querySelectorAll('.btn')
+const allBtn = document.querySelectorAll('#add-btn')
 let count = 1;
 let select = 0;
 let clickCount = 0;
@@ -11,18 +11,24 @@ for(const btn of allBtn){
 // console.log(btn)
     btn.addEventListener('click',function(e){
         if(clickCount < 4){
-            console.log(e.target.innerText);
+            // background color added
+
+            btn.style.background = '#1DD100';
+            btn.style.color = '#FFF';
+
+            // seat left
             const allSeat = document.getElementById('seat-count').innerText;
             let allSeatText = parseInt(allSeat);
             allSeatText -=count
             setInnerText('seat-count', allSeatText);
             clickCount++;
+
+            // seat added
             select = select + 1;
             setInnerText('seat-select',select);
 
             // show ticket list
             const seatName = e.target.innerText;
-
             const selectedContainer = document.querySelector('.slected-ticket-container')
             const tr = document.createElement('tr');
             const td = document.createElement('td');
@@ -43,8 +49,11 @@ for(const btn of allBtn){
             const totalPrice = document.getElementById('total-cost').innerText = totalCostConvert + ticketPrice;
 
             // grand cost
+            setInnerText('grand-cost',totalPrice)
 
-            
+            // button disable
+            const button = e.target;
+            button.disabled = true;
             
         }
 
@@ -53,12 +62,8 @@ for(const btn of allBtn){
 }
 
 
+
+
 function setInnerText (id,value){
     document.getElementById(id).innerText = value;    
-}
-
-function setBackgroundColorById (elementId){
-    const element = document.getElementById(elementId);
-    element.classList.add('bg-[#1DD100]');
-    element.classList.add('text-white');
 }

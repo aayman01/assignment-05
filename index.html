@@ -150,8 +150,8 @@
                 </p>
 
                 <!-- bus route info -->
-                <div class="flex bg-white rounded-3xl py-8  pl-8 pr-16">
-                    <div>
+                <div class="flex bg-white rounded-3xl ">
+                    <div class="py-8  pl-8 pr-16">
                         <div class="flex justify-between items-center">
                             <div class="flex gap-3">
                                 <img src="./images/bus-logo.png" alt="">
@@ -205,7 +205,10 @@
 
                 <!-- select your ticket start -->
                 <div id="ticket-section" class="bg-white rounded-3xl mt-8 p-8">
-                    <h3 class="mb-4 text-2xl font-semibold font-raleway">Selected Seat</h3>
+                    <div class="flex gap-[270px]">
+                        <h3 class="mb-4 text-2xl font-semibold font-raleway">Selected Seat</h3>
+                        <h3 class="mb-4 text-2xl font-semibold font-raleway"> Selected Seat</h3>
+                    </div>
                     <div class="flex">
                         <div class="flex gap-16 flex-grow">
                         <div class="grid grid-cols-2 gap-8">
@@ -253,9 +256,10 @@
                             <button id="add-btn" class="btn btn-sm">J4</button>
                         </div>
                         </div>
+                        
                         <div class="flex-grow">
                             <!-- cupon apply section -->
-                        <div class="bg-[#F7F8F8] rounded-xl p-8">
+                          <div class="bg-[#F7F8F8] rounded-xl p-8">
                             <div class="overflow-x-auto">
                               <table class="table">
                                 <!-- head -->
@@ -281,7 +285,7 @@
                                 <button class="btn bg-[#1DD100] rounded-lg" disabled>Apply</button>
                                 <div class="flex justify-between p-5">
                                     <p class="pb-1 font-inter font-medium">Grand Total:</p>
-                                    <p class="font-inter font-medium">BDT <span>0</span></p>
+                                    <p class="font-inter font-medium">BDT <span id="grand-cost" class="grand-cost">0</span></p>
                                 </div>
                             </div>
                         </div>
