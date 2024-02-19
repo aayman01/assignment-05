@@ -103,11 +103,11 @@ function checkInputs() {
 
     const inputField1 = document.getElementById('passenger-info-input-name');
     const inputField2 = document.getElementById('passenger-info-input-phone');
-    const inputField3 = document.getElementById('passenger-info-input-email');
+    // const inputField3 = document.getElementById('passenger-info-input-email');
     const submitButton = document.getElementById('passenger-info-btn');
     
 
-    if (inputField1.value !== '' && inputField2.value !== '' && inputField3.value !== '') {
+    if (inputField1.value !== '' && inputField2.value !== '') {
       submitButton.disabled = false;
     } else {
       submitButton.disabled = true;
