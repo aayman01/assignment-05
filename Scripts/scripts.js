@@ -36,7 +36,7 @@ for(const btn of allBtn){
             const td2 = document.createElement('td');
             td2.innerText = 'Economoy'
             const td3 = document.createElement('td');
-            td3.innerText = '500';
+            td3.innerText = '550';
             tr.appendChild(td);
             tr.appendChild(td2);
             tr.appendChild(td3);
