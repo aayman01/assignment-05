@@ -89,3 +89,8 @@ const couponCode = document.getElementById('coupon-btn').addEventListener('click
 function setInnerText (id,value){
     document.getElementById(id).innerText = value;    
 }
+
+// refresh page
+function refreshPage() {
+    location.reload();
+}      
