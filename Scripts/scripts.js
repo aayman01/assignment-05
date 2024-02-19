@@ -63,6 +63,7 @@ for(const btn of allBtn){
 
 const couponCode = document.getElementById('coupon-btn').addEventListener('click',function(){
     // console.log('clicked')
+    
     const couponInput = document.getElementById('coupon-input').value;
     if(couponInput == 'NEW15' || couponInput == 'Couple 20'){
         if(couponInput == 'NEW15'){
@@ -85,7 +86,7 @@ const couponCode = document.getElementById('coupon-btn').addEventListener('click
         alert('Wrong Coupon Code')
     }
 })
-
+// set innner text
 function setInnerText (id,value){
     document.getElementById(id).innerText = value;    
 }
@@ -93,4 +94,23 @@ function setInnerText (id,value){
 // refresh page
 function refreshPage() {
     location.reload();
-}      
+} 
+
+// input field button enable
+
+
+function checkInputs() {
+
+    const inputField1 = document.getElementById('passenger-info-input-name');
+    const inputField2 = document.getElementById('passenger-info-input-phone');
+    const inputField3 = document.getElementById('passenger-info-input-email');
+    const submitButton = document.getElementById('passenger-info-btn');
+    
+
+    if (inputField1.value !== '' && inputField2.value !== '' && inputField3.value !== '') {
+      submitButton.disabled = false;
+    } else {
+      submitButton.disabled = true;
+    }
+}
+
